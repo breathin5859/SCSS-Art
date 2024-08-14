@@ -1,202 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-/* Figma Styles of your File */
-/* Colors */
-/* Fonts */
-/* Effects */
-/* Reset */
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-div,
-p,
-blockquote,
-pre,
-code,
-address,
-ul,
-ol,
-li,
-nav,
-section,
-article,
-header,
-footer,
-main,
-aside,
-dl,
-dt,
-dd,
-table,
-thead,
-tbody,
-tfoot,
-label,
-caption,
-th,
-td,
-form,
-fieldset,
-legend,
-hr,
-input,
-button,
-textarea,
-object,
-figure,
-figcaption,
-dialog {
-  margin: 0;
-  padding: 0;
-}
+/* Error: Module loop: this module is already being loaded.
+ *   ,--> scss\abstracts\mixin\_text.scss
+ * 1 | @use "../index" as *;
+ *   | ^^^^^^^^^^^^^^^^^^^^ new load
+ *   '
+ *   ,--> scss\style.scss
+ * 1 | @use "./abstracts/" as *;
+ *   | ======================== original load
+ *   '
+ *   scss\abstracts\mixin\_text.scss 1:1   @forward
+ *   scss\abstracts\mixin\_index.scss 5:1  @forward
+ *   scss\abstracts\_index.scss 1:1        @use
+ *   scss\style.scss 1:1                   root stylesheet */
 
-body,
-textarea,
-button,
-img,
-fieldset,
-dialog {
-  border: none;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Module loop: this module is already being loaded.\a   \250c \2500 \2500 > scss\\abstracts\\mixin\\_text.scss\a 1 \2502  @use "../index" as *;\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > scss\\style.scss\a 1 \2502  @use "./abstracts/" as *;\d\a   \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   scss\\abstracts\\mixin\\_text.scss 1:1   @forward\a   scss\\abstracts\\mixin\\_index.scss 5:1  @forward\a   scss\\abstracts\\_index.scss 1:1        @use\a   scss\\style.scss 1:1                   root stylesheet';
 }
-
-textarea {
-  resize: none;
-}
-
-ul,
-ol,
-li {
-  list-style: none;
-}
-
-table {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-address,
-cite,
-code,
-em,
-i {
-  font-style: normal;
-  font-weight: normal;
-}
-
-u,
-ins,
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
-  background-color: transparent;
-}
-
-/* Normalize */
-input[type=number],
-input[type=text],
-input[type=password],
-input[type=url],
-input[type=email],
-input[type=tel],
-input[type=date],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
-  appearance: none;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-}
-
-input[type=date] {
-  position: relative;
-}
-
-input[type=date]::-webkit-clear-button,
-input[type=date]::-webkit-inner-spin-button {
-  display: none;
-}
-
-input[type=date]::-webkit-calendar-picker-indicator {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: transparent;
-  color: transparent;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-}
-
-input[type=date]::before {
-  content: attr(data-placeholder);
-  width: 100%;
-}
-
-input[type=date]:valid::before {
-  display: none;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1rem;
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.btn.base {
-  font-weight: 700;
-}
-
-.a11y-hidden {
-  overflow: hidden;
-  position: absolute;
-  border: 0;
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.mt12 {
-  margin-top: 1.2rem;
-}
-
-.mt24 {
-  margin-top: 2.4rem;
-}
-
-.align {
-  display: flex;
-}
-
-/*# sourceMappingURL=style.css.map */

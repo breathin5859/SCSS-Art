@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.avatart {
+  @include avatar-text;
+  width: rem(48);
+  height: rem(48);
+  border-radius: rem(1000);
+  background: $gradient-secondery;
+}

@@ -1,0 +1,9 @@
+@use "../../abstracts/" as *;
+
+@mixin avatar-text {
+  font-size: rem(32);
+  font-weight: 700;
+  line-height: rem(36);
+  letter-spacing: rem(1);
+  color: $grayscale-off-white;
+}

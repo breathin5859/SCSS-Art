@@ -1,5 +1,24 @@
 @use "../abstracts/" as *;
 
 .align {
-  @include align;
+  display: flex;
+
+  &.center {
+    @include align(center);
+  }
+  &.right {
+    @include align(right);
+  }
+  &.both {
+    @include align(both);
+  }
+  &.vt {
+    @include align(null, vt);
+  }
+  &.vm {
+    @include align(null, vm);
+  }
+  &.mb {
+    @include align(null, vb);
+  }
 }

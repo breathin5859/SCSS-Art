@@ -1,5 +1,15 @@
-@mixin align($align: null, $justify: null) {
-  display: flex;
-  align-items: $align;
-  justify-content: $justify;
+@mixin align($direction: null, $vertical: null) {
+  @if $direction == "center" {
+    justify-content: center;
+  } @else if $direction == "both" {
+    justify-content: space-between;
+  } @else if $direction == "right" {
+    justify-content: end;
+  } @else if $vertical == "vt" {
+    align-items: start;
+  } @else if $vertical == "vm" {
+    align-items: center;
+  } @else if $vertical == "vb" {
+    align-items: end;
+  }
 }
