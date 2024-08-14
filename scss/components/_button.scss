@@ -1,1 +1,10 @@
 @use "../abstracts/" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &.base {
+    @include button(base);
+  }
+}
