@@ -1,0 +1,15 @@
+@use "../../abstracts/" as *;
+
+@mixin button($size, $color) {
+  font-weight: 700;
+
+  @if $size == "bas e" {
+    padding: rem(8) rem(30);
+    background: $button;
+    font-size: rem(16);
+  } @else if $size == "lg" {
+    padding: rem(14) rme(40);
+    line-height: rem(28);
+    font-size: rem(20);
+  }
+}
