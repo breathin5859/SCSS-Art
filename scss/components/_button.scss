@@ -4,7 +4,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   &.base {
-    // @include button(base);
+    @include button(base);
+  }
+  &.lg {
+    @include button(lg);
   }
 }

@@ -1,4 +1,13 @@
-@use "../../abstracts/" as *;
+@use "../function" as *;
+@use "../variable" as *;
+
+@mixin text($color, $size, $weight, $lineHight, $letter) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHight;
+  letter-spacing: $letter;
+  color: $color;
+}
 
 @mixin avatar-text {
   font-size: rem(32);

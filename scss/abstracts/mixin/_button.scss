@@ -1,15 +1,19 @@
-// @use "../../abstracts/" as *;
+@use "../function" as *;
+@use "../variable" as *;
+@use "./text" as *;
 
-// @mixin button($size) {
-//   font-weight: 700;
+@mixin button($size) {
+  font-weight: 700;
 
-//   @if $size == "base" {
-//     padding: rem(8) rem(30);
-//     background: $button;
-//     font-size: rem(16);
-//   } @else if $size == "lg" {
-//     padding: rem(14) rme(40);
-//     line-height: rem(28);
-//     font-size: rem(20);
-//   }
-// }
+  @if $size == "base" {
+    @include text($grayscale-off-white, rem(16), 700, rem(24), null);
+    padding: rem(8) rem(30);
+    background: $button;
+    font-size: rem(16);
+    line-height: rem(24);
+  } @else if $size == "lg" {
+    padding: rem(14) rme(40);
+    line-height: rem(28);
+    font-size: rem(20);
+  }
+}
