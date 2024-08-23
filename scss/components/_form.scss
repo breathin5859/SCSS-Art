@@ -1,0 +1,138 @@
+@use "../abstracts/" as *;
+
+// form 정의
+$formSetting: (
+  "height": rem(56),
+  "border": rem(1) solid $grayscale-input-bg,
+  "borderRadius": rem(8),
+  "bgColor": $grayscale-input-bg,
+  "paddingInline": rem(24),
+  "fontSize": rem(16),
+  "fontWeight": 500,
+  "fontColor": $grayscale-label,
+  "lineHeight": rem(24),
+  "letterSpacing": rem(0.16),
+  "placeholderColor": $grayscale-label,
+  "disabledBgColor": rgba($grayscale-input-bg, 0.5),
+  "disabledFontColor": rgba($grayscale-label, 0.5),
+  "readonlyBgColor": rgba($grayscale-input-bg, 0.5),
+  "activeBorder": rem(1) solid $grayscale-off-white,
+  "activeBgColor": $grayscale-off-white,
+);
+
+// select 정의
+$selectSetting: (
+  "bgUrl": "bg_select.svg",
+  "iconPosition": rem(9.87),
+  "bgWidth": 23.654,
+  "paddingInline": 15.77,
+);
+
+//search 정의
+$searchSetting: (
+  "bgUrl": "bg_search.svg",
+  "iconPosition": rem(8),
+  "bgWidht": 16,
+  "paddingInline": 10,
+);
+
+//checkbox 정의
+$checkSetting: (
+  1: (
+    "className": ".check-type1",
+    "onImage": "ico_check_on",
+    "width": rem(32),
+    "height": rem(32),
+  ),
+  2: (
+    "className": ".check-type2 ",
+    "onImage": "ico_check_on",
+    "width": rem(24),
+    "height": rem(24),
+  ),
+);
+
+%form {
+  height: map-get($formSetting, height);
+  border: map-get($formSetting, border);
+  border-radius: map-get($formSetting, borderRadius);
+  background-color: map-get($formSetting, bgColor);
+  padding-inline: map-get($formSetting, paddingInline);
+  font-size: map-get($formSetting, fontSize);
+  font-weight: map-get($formSetting, fontWeight);
+  color: map-get($formSetting, fontColor);
+  line-height: map-get($formSetting, lineHeight);
+  letter-spacing: map-get($formSetting, letterSpacing);
+  box-sizing: border-box;
+  &::placeholder {
+    color: map-get($formSetting, placeholderColor);
+  }
+  &:disabled {
+    color: map-get($formSetting, disabledFontColor);
+    background: map-get($formSetting, disabledBgColor);
+  }
+  &[readonly] {
+    background: map-get($formSetting, readonlyBgColor);
+  }
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: map-get($formSetting, border);
+  background-color: map-get($formSetting, bgColor);
+  border-radius: map-get($formSetting, borderRadius);
+
+  &.--active {
+    border: rem(1) solid $grayscale-label;
+    background: map-get($formSetting, activeBgColor);
+    .input {
+      background: map-get($formSetting, activeBgColor);
+      border: map-get($formSetting, activeBgColor);
+    }
+  }
+
+  > div {
+    width: 100%;
+  }
+}
+
+.input {
+  @extend %form;
+  width: var(--w, 100%);
+
+  .input-wrap & {
+    height: rem(24);
+  }
+}
+
+.input-guide {
+  @include text($grayscale-placeholder, rem(14), 500, rem(20), rem(0.75));
+  padding-inline: rem(24);
+}
+.select {
+  $result: map-get($selectSetting, paddingInline) * 2 + map-get($selectSetting, bgWidth);
+
+  @extend %form;
+  @include background(map-get($selectSetting, bgUrl), right map-get($selectSetting, iconPosition) center, $grayscale-input-bg);
+  padding-right: rem($result);
+  width: var(--w, 100%);
+  appearance: none;
+
+  &.on {
+    border: rem(1) solid $primary-default;
+  }
+  &:disabled {
+    @include background(map-get($selectSetting, bgUrl), right map-get($selectSetting, iconPosition) center, $grayscale-input-bg);
+    color: rgba($grayscale-body, 0.5);
+  }
+}
+
+.search {
+  $result: map-get($searchSetting, paddingInline) * 2 + map-get($searchSetting, bgWidth);
+
+  @extend %form;
+  @include background(map-get($searchSetting, bgUrl), left map-get($searchSetting, iconPosition) center, $grayscale-input-bg);
+  padding-left: rem($result);
+  width: var(--w, 100%);
+}

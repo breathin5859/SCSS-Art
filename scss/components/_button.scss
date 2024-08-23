@@ -11,4 +11,14 @@
   &.lg {
     @include button(lg);
   }
+
+  &-close {
+    @include background("ico_close.svg", center);
+
+    .input-wrap & {
+      padding: rem(16);
+      width: rem(56);
+      height: rem(56);
+    }
+  }
 }
