@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.mix-type1 {
+  position: relative;
+  background-color: $grayscale-off-white;
+
+  .star {
+    position: absolute;
+    inset: rem(11) rem(12) auto auto;
+  }
+
+  .detail-solid & {
+    padding: rem(12) rem(17) rem(29.4);
+  }
+}

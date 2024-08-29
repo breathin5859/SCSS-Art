@@ -1,6 +1,9 @@
 @use "../abstracts/" as *;
 
 .footer {
+  &.white {
+    background-color: $grayscale-background;
+  }
   &__top {
     padding: rem(23) rem(19) rem(89);
   }

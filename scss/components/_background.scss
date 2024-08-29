@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.bg {
+  &-white {
+    background-color: $grayscale-background;
+  }
+}

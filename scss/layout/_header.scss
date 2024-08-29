@@ -7,6 +7,9 @@
   height: rem(55.833);
   padding-inline: rem(16);
 
+  &.white {
+    background-color: $grayscale-background;
+  }
   &__right {
     display: flex;
     align-items: center;

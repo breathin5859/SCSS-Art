@@ -8,4 +8,8 @@
     padding: rem(4) rem(10);
     border-radius: 1000px;
   }
+
+  .detail-solid & {
+    gap: rem(2);
+  }
 }

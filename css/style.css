@@ -181,6 +181,10 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+.bg-white {
+  background-color: #f8f8f8;
+}
+
 .btn-external, .btn-search, .btn-menu {
   display: inline-block;
   width: 4rem;
@@ -379,12 +383,16 @@ body {
   justify-content: space-between;
   align-items: center;
   border-radius: 1.6rem;
+  background-color: #fcfcfc;
+  box-shadow: 0px 81px 106px 0px rgba(0, 0, 0, 0.07), 0px 10.142px 13.273px 0px rgba(0, 0, 0, 0.03);
 }
 .list-type2 a {
   flex: 1;
   padding: 1.4rem 3.458rem 1.4rem 7.689rem;
+  background-color: #fff;
   color: #222222;
   font-weight: 700;
+  font-size: 1.6rem;
   line-height: 2.4rem;
 }
 
@@ -401,6 +409,9 @@ body {
 .list-type3 li > a {
   flex: 1;
   padding: 1.054rem 1.2rem 1.278rem;
+}
+.activity .list-type3 a {
+  padding: 1.1rem 1.2rem;
 }
 
 .list-type4 {
@@ -510,9 +521,15 @@ body {
   padding: 0.4rem 1rem;
   border-radius: 1000px;
 }
+.detail-solid .tags {
+  gap: 0.2rem;
+}
 
 .rounded8 {
   border-radius: 0.8rem;
+}
+.rounded24 {
+  border-radius: 2.4rem;
 }
 .rounded52 {
   border-radius: 5.2rem;
@@ -572,12 +589,27 @@ body {
   line-height: 2.4rem;
   letter-spacing: 0.016rem;
 }
+.activity .text-type4 {
+  font-weight: 400;
+  font-size: ren(20);
+  line-height: 2.8rem;
+}
+.mix-type1 .text-type4 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
 
 .text-type5 {
   color: #888888;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 2rem;
+}
+.mix-type1 .text-type5 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
 }
 
 .--bullet {
@@ -666,6 +698,22 @@ body {
   background-color: #fcfcfc;
 }
 
+.mix-type1 {
+  position: relative;
+  background-color: #fcfcfc;
+}
+.mix-type1 .star {
+  position: absolute;
+  inset: 1.1rem 1.2rem auto auto;
+}
+.detail-solid .mix-type1 {
+  padding: 1.2rem 1.7rem 2.94rem;
+}
+
+.shadow {
+  box-shadow: 0px 8px 24px 0px rgba(69, 69, 69, 0.06);
+}
+
 .a11y-hidden {
   overflow: hidden;
   position: absolute;
@@ -679,20 +727,48 @@ body {
   margin-top: 0.7rem;
 }
 
+.mt10 {
+  margin-top: 1rem;
+}
+
 .mt12 {
   margin-top: 1.2rem;
 }
 
-.mt24 {
-  margin-top: 2.4rem;
+.mt20 {
+  margin-top: 2rem;
 }
 
-.mt29 {
-  margin-top: 2.9rem;
+.mt25 {
+  margin-top: 2.5rem;
+}
+
+.mt27 {
+  margin-top: 2.7rem;
+}
+
+.mt36 {
+  margin-top: 3.6rem;
+}
+
+.mt58 {
+  margin-top: 5.8rem;
 }
 
 .mr4 {
   margin-right: 0.4rem;
+}
+
+.pi16 {
+  padding-inline: 1.6rem;
+}
+
+.pi20 {
+  padding-inline: 2rem;
+}
+
+.gap12 {
+  gap: 1.2rem;
 }
 
 .align {
@@ -727,11 +803,17 @@ body {
   height: 5.5833rem;
   padding-inline: 1.6rem;
 }
+.header.white {
+  background-color: #f8f8f8;
+}
 .header__right {
   display: flex;
   align-items: center;
 }
 
+.footer.white {
+  background-color: #f8f8f8;
+}
 .footer__top {
   padding: 2.3rem 1.9rem 8.9rem;
 }
