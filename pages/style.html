@@ -8,53 +8,98 @@
     <link rel="stylesheet" href="../css/guide.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="header__left">
+        <h1>
+          <a href=""><img src="../images/logo.svg" alt="" /></a>
+        </h1>
+      </div>
+      <div class="header__right">
+        <button class="btn-search"></button>
+        <button class="btn-menu"></button>
+      </div>
+    </header>
+
+    <!-- 기타 -->
     <details name="guide">
       <summary>기타 가이드</summary>
       <div>
+        <h2>bullet</h2>
+        base.green
+        <div class="bullet base green"></div>
+        sm.rad
+        <div class="bullet sm red"></div>
+        <div class="bullet fire"></div>
+        <div class="bullet star"></div>
+      </div>
+    </details>
+    <!-- 프로필 -->
+    <details name="guide" style="background: #f8f8f8">
+      <summary>프로필 가이드</summary>
+      <div>
         <h2>Avatar</h2>
-        <button class="avatar-type1">H</button>
-        <button class="avatar-type1">
+        <div class="avatar-type1">H</div>
+        <br />
+        .blue
+        <div class="avatar-type1 blue">H</div>
+        <div class="avatar-type1">
           H
-          <span class="avatar__alram"></span>
-        </button>
-        <button class="avatar-type2">
-          <div class="img">
+          <span class="bullet base green"></span>
+        </div>
+        <div class="avatar-type2">
+          <div class="avatar__img">
             <img src="../images/img_avatar.png" alt="" />
           </div>
-        </button>
-        <button class="avatar-type2">
-          <div class="img">
+        </div>
+        <div class="avatar-type2">
+          <div class="avatar__img">
             <img src="../images/img_avatar.png" alt="" />
-            <span class="avatar__alram"></span>
+            <span class="bullet base green"></span>
           </div>
           <span>First & Lastname</span>
-        </button>
-        <button class="avatar-type2">
-          <div class="img">
+        </div>
+        <div class="avatar-type2">
+          <div class="avatar__img">
             <img src="../images/img_avatar.png" alt="" />
-            <span class="avatar__alram"></span>
+            <span class="bullet base green"></span>
           </div>
           <div>
             First & Lastname
             <div class="status">Status</div>
           </div>
-        </button>
-        <button class="avatar-type2 column">
-          <div class="img">
+        </div>
+        <div class="avatar-type2 column">
+          <div class="avatar__img">
             <img src="../images/img_avatar.png" alt="" />
-            <span class="avatar__alram"></span>
+            <span class="bullet base green"></span>
           </div>
           <span>First Name</span>
-        </button>
+        </div>
+
+        <h2>user</h2>
+        <a class="user align vm">
+          <div class="avatar-type1">H</div>
+          <div class="text-type4">@openart</div>
+        </a>
+
+        <h2>tags</h2>
+        <div class="tags">
+          <span>#color</span>
+          <span>#circle</span>
+          <span>#black</span>
+          <span>#art</span>
+        </div>
       </div>
     </details>
+    <!-- 탭 -->
     <details name="guide">
       <summary>탭 가이드</summary>
       <div>
         <h2></h2>
       </div>
     </details>
-    <details name="guide" open>
+    <!-- 폼 -->
+    <details name="guide">
       <summary>폼 가이드</summary>
       <div>
         <h2>폼 공통</h2>
@@ -99,9 +144,202 @@
         <div><input type="checkbox" name="check1" id="check1-1" /><label for="check1-1"></label></div>
       </div>
     </details>
+    <!-- 리스트 -->
     <details name="guide">
       <summary>리스트 가이드</summary>
-      <div></div>
+      <div>
+        <h2>list-type1</h2>
+        <ul class="list-type1">
+          <li>
+            <a href="">
+              <div class="text-type2">Silent Wave</div>
+              <div class="user align both">
+                <div class="avatar-type2">
+                  <div class="avatar__img">
+                    <img src="../images/img_avatar.png" alt="" />
+                    <span class="bullet base green"></span>
+                  </div>
+                  <div style="line-height: 2rem">
+                    First &amp; Lastname
+                    <div class="status">Status</div>
+                  </div>
+                </div>
+                <button class="btn ico1"></button>
+              </div>
+              <div class="img"><img src="../images/img_list1.png" alt="" /></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="text-type2">Silent Wave</div>
+              <div class="user align both">
+                <div class="avatar-type2">
+                  <div class="avatar__img">
+                    <img src="../images/img_avatar.png" alt="" />
+                    <span class="bullet base green"></span>
+                  </div>
+                  <div style="line-height: 2rem">
+                    First &amp; Lastname
+                    <div class="status">Status</div>
+                  </div>
+                </div>
+                <button class="btn ico1"></button>
+              </div>
+              <div class="img"><img src="../images/img_list1.png" alt="" /></div>
+            </a>
+          </li>
+        </ul>
+
+        <h2>list-type2</h2>
+        <ul class="list-type2">
+          <li>
+            <a href="" class="etherscan"> View on Etherscan </a>
+            <button class="btn-external"></button>
+          </li>
+          <li>
+            <a href="" class="ipfs"> View on IPFS </a>
+            <button class="btn-external"></button>
+          </li>
+          <li>
+            <a href="" class="metadata"> View IPFS Metadata </a>
+            <button class="btn-external"></button>
+          </li>
+        </ul>
+
+        <h2>list-type3</h2>
+        <ul class="list-type3">
+          <li>
+            <a href="">
+              <div class="avatar-type2">
+                <div class="avatar__img">
+                  <img src="../images/img_avatar.png" alt="" />
+                </div>
+                <div>
+                  <div class="text-type1">Auction won by David</div>
+                  <div class="text-type3">June 04, 2021 at 12:00am</div>
+                  <div class="text-type2 mt7">Sold for 1.50 ETH</div>
+                </div>
+              </div>
+            </a>
+            <button class="btn-external"></button>
+          </li>
+          <li>
+            <a href="">
+              <div class="avatar-type2">
+                <div class="avatar__img">
+                  <img src="../images/img_avatar.png" alt="" />
+                </div>
+                <div>
+                  <div class="text-type1">Auction won by David</div>
+                  <div class="text-type3">June 04, 2021 at 12:00am</div>
+                  <div class="text-type2 mt7">1.50 ETH <span class="text-type5">$2,683.73</span></div>
+                </div>
+              </div>
+            </a>
+            <button class="btn-external"></button>
+          </li>
+        </ul>
+      </div>
     </details>
+    <!-- 버튼 -->
+    <details name="guide">
+      <summary>버튼 가이드</summary>
+      <div>
+        <button class="btn sm">.btn.sm</button>
+        <button class="btn base">.btn.base</button>
+        <button class="btn base rounded8">.btn.base.rounded8</button>
+        <button class="btn base rounded8 white">.btn.base.rounded8.white</button>
+        <button class="btn base rounded8 white-round">.btn.base.rounded8.white-round</button>
+        <button class="btn base rounded8 gradient">.btn.base.rounded8.gradient</button>
+        <button class="btn ico1">.btn.ico1</button>
+        <button class="btn ico2">.btn.ico2</button>
+        <button class="btn ico3">.btn.ico3</button>
+        <button class="btn ico1 rounded-full"></button>
+        <button class="btn ico1-2 rounded-full"></button>
+        <button class="btn-menu"></button>
+        <button class="btn-search"></button>
+        <h2>버튼그룹</h2>
+        <div class="btn-group1">
+          <button class="btn base rounded8 gradient">Earn now</button>
+          <button class="btn base rounded8 white-round">Earn now</button>
+        </div>
+        <div class="btn-group2">
+          <button class="btn ico1 rounded-full"></button>
+          <button class="btn ico2 rounded-full"></button>
+          <button class="btn ico3 rounded-full"></button>
+        </div>
+      </div>
+    </details>
+    <!-- 상태 -->
+    <details name="guide">
+      <summary>상태 가이드</summary>
+      <div>
+        <h2>공통</h2>
+        <div class="state sold-out"><span class="text-type3">Sold For</span> <b class="text-type2">2.00 ETH</b></div>
+        <div class="state align both">
+          <div class="align">
+            <div class="bullet base green mt7 mr4"></div>
+            <div>
+              <span class="text-type3">Ending in</span>
+              <div class="text-type2">2.00 ETH</div>
+            </div>
+          </div>
+          <div>
+            <span class="text-type3">Ending in</span>
+            <div class="text-type2">2.00 ETH</div>
+          </div>
+        </div>
+      </div>
+    </details>
+    <!-- 텍스트 -->
+    <details name="guide">
+      <summary>텍스트 가이드</summary>
+      <div>
+        <h2>공통</h2>
+        <div class="text-type1">text-type1 #222 700</div>
+        <div class="text-type2">text-type2 #222 700</div>
+        <div class="text-type3">text-type3 #555 400</div>
+        <div class="text-type4">text-type4 #333 700</div>
+        <div class="text-type5">text-type5 #888 500</div>
+
+        <h2>다중크기</h2>
+        <div class="text-type">text-type6 #222 200 <span class="multiple300">300</span></div>
+      </div>
+    </details>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="align vm col">
+          <div class="footer-img">
+            <img src="../images/logo.svg" alt="" />
+          </div>
+          <p class="text-type2">
+            <span class="we200">The<span class="we30"> New</span> <span class="we500">Creative</span></span> <span>Economy</span>
+          </p>
+        </div>
+        <div class="btn-group mt29">
+          <button class="btn base rounded8 gradient">Earn now</button>
+          <button class="btn base rounded8 white-round">Earn now</button>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>
+          <ul class="list-type4">
+            <li><a href="">Instagram </a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href=""> Discord </a></li>
+            <li><a href=""> Blog </a></li>
+          </ul>
+          <ul class="list-type4">
+            <li><a href="">About</a></li>
+            <li><a href="">Community Guidelines</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Help</a></li>
+          </ul>
+        </div>
+        <div class="copy">&copy;2021 Openart</div>
+      </div>
+    </footer>
   </body>
 </html>

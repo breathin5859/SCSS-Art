@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+.etherscan {
+  .list-type2 & {
+    @include background("ico_etherscan.png", left rem(16.57) center);
+  }
+}
+
+.ipfs {
+  .list-type2 & {
+    @include background("ico_ipfs.svg", left rem(16.57) center);
+  }
+}
+
+.metadata {
+  .list-type2 & {
+    @include background("ico_metadata.svg", left rem(16.57) center);
+  }
+}

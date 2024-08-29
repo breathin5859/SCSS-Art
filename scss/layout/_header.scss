@@ -1,3 +1,14 @@
+@use "../abstracts/" as *;
+
 .header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: rem(55.833);
+  padding-inline: rem(16);
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
 }

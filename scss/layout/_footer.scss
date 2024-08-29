@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+
+.footer {
+  &__top {
+    padding: rem(23) rem(19) rem(89);
+  }
+  &-img {
+    width: rem(177.324);
+    height: rem(46.864);
+    img {
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    background-color: $grayscale-title-active;
+    > div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-block: rem(25);
+    }
+  }
+}
+
+.copy {
+  padding: rem(29) rem(19) rem(28);
+  border-top: rem(1) solid $grayscale-line;
+  color: $grayscale-input-bg;
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: rem(20);
+}

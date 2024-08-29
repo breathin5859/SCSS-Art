@@ -1,9 +1,15 @@
 @use "../abstracts/" as *;
 
-$mt: (12, 24);
+$mt: (7, 12, 24, 29);
+$mr: (4);
 
 @each $margin in $mt {
   .mt#{$margin} {
     margin-top: rem($margin);
+  }
+}
+@each $margin in $mr {
+  .mr#{$margin} {
+    margin-right: rem($margin);
   }
 }

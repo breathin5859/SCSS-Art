@@ -1,0 +1,106 @@
+@use "sass:list";
+@use "../abstracts/" as *;
+
+.--bullet {
+  position: absolute;
+  inset: rem(4.12) auto auto rem(38);
+  width: rem(12);
+  height: rem(12);
+  background: $success-default;
+  border-radius: 1000px;
+  outline: 1px solid #fff;
+  // transition: -50%, -50%;
+}
+
+%bullet {
+  border-radius: rem(1000);
+}
+
+//사이즈
+$bulletSize: (
+  1: (
+    "className": ".sm",
+    "width": 9.77,
+    "height": 9.77,
+    "borderRadius": 1000,
+  ),
+  2: (
+    "className": ".base",
+    "width": 12,
+    "height": 12,
+    "borderRadius": 1000,
+  ),
+);
+
+//색상
+$bulletColor: (
+  1: (
+    "className": ".green",
+    "bgColor": $success-default,
+  ),
+  2: (
+    "className": ".red",
+    "bgColor": $error-dark,
+  ),
+);
+
+$bulletIcon: (
+  1: (
+    "className": ".fire",
+    "bgImg": "bu_fire.svg",
+    "width": 19.2,
+    "height": 19.24,
+  ),
+  2: (
+    "className": ".star",
+    "bgImg": "bu_star.svg",
+    "width": 26,
+    "height": 25.24,
+  ),
+);
+
+@mixin bulletSize($varName, $index) {
+  &#{map-get($varName, $index, className)} {
+    width: rem(map-get($varName, $index, width));
+    height: rem(map-get($varName, $index, height));
+    border-radius: rem(map-get($varName, $index, borderRadius));
+  }
+}
+
+@mixin bulletColor($varName, $index) {
+  &#{map-get($varName, $index, className)} {
+    background-color: map-get($varName, $index, bgColor);
+  }
+}
+
+@mixin bulletIcon($varName, $index) {
+  &#{map-get($varName, $index, className)} {
+    @include background(map-get($varName, $index, bgImg));
+    width: rem(map-get($varName, $index, width));
+    height: rem(map-get($varName, $index, height));
+  }
+}
+
+.bullet {
+  @for $index from 1 through list.length($bulletSize) {
+    @include bulletSize($bulletSize, $index);
+  }
+  @for $index from 1 through list.length($bulletColor) {
+    @include bulletColor($bulletColor, $index);
+  }
+  @for $index from 1 through list.length($bulletIcon) {
+    @include bulletIcon($bulletIcon, $index);
+  }
+
+  .avatar-type1 &,
+  .avatar-type2 & {
+    position: absolute;
+    inset: rem(4.12) auto auto rem(38);
+    outline: 1px solid #fff;
+  }
+
+  .state & {
+    width: rem(6.361);
+    height: rem(6.361);
+  }
+}

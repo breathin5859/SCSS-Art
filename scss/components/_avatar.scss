@@ -9,42 +9,53 @@
   border-radius: rem(1000);
 }
 
-.avatar-type1 {
-  @extend %avatar;
-  @include text($grayscale-off-white, rem(32), 700, rem(32), rem(1));
-  position: relative;
-  background: $gradient-secondery;
-  img {
-    border-radius: 1000px;
-  }
-}
-.avatar__alram {
-  position: absolute;
-  inset: rem(4.12) auto auto rem(38);
-  width: rem(12);
-  height: rem(12);
-  background: $success-default;
-  border-radius: 1000px;
-  outline: 1px solid #fff;
-  // transition: -50%, -50%;
-}
+.avatar {
+  &-type1 {
+    @extend %avatar;
+    @include text($grayscale-off-white, rem(32), 700, rem(32), rem(1));
+    position: relative;
+    background: $gradient-secondery;
+    img {
+      border-radius: 1000px;
+    }
 
-.avatar-type2 {
-  @include text($grayscale-body, rem(18), 700, rem(28), rem(0.75));
-  display: flex;
-  align-items: center;
-  gap: rem(3.981);
+    &.blue {
+      background: $gradient-accent;
+    }
 
-  &.column {
-    flex-direction: column;
+    .user & {
+      width: rem(32);
+      height: rem(32);
+      font-size: rem(24);
+    }
   }
 
-  .status {
-    @include text($grayscale-placeholder, rem(14), 500, rem(20), rem(0.75));
-    text-align: left;
+  &-type2 {
+    @include text($grayscale-body, rem(18), 700, rem(28), rem(0.75));
+    display: flex;
+    align-items: center;
+    gap: rem(3.981);
+
+    &.column {
+      flex-direction: column;
+    }
+
+    &:has(.status) {
+      line-height: rem(20);
+    }
+
+    .status {
+      @include text($grayscale-placeholder, rem(14), 500, rem(20), rem(0.75));
+      text-align: left;
+    }
+
+    .list-type3 & {
+      gap: rem(9.96);
+      align-items: start;
+    }
   }
 
-  .img {
+  &__img {
     @extend %avatar;
     position: relative;
     display: inline-block;

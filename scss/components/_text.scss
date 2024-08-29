@@ -1,0 +1,64 @@
+@use "../abstracts/" as *;
+
+.text-type1 {
+  color: $grayscale-title-active;
+  font-size: rem(32);
+  font-weight: 700;
+  line-height: rem(36);
+  letter-spacing: rem(1);
+
+  .list-type3 & {
+    font-size: rem(14);
+    line-height: rem(20);
+  }
+}
+.text-type2 {
+  color: $grayscale-title-active;
+  font-size: rem(24);
+  font-weight: 700;
+  line-height: rem(32);
+  letter-spacing: rem(0.24);
+
+  .state & {
+    font-size: rem(20);
+    line-height: rem(28);
+  }
+
+  .list-type3 & {
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+  .footer & {
+    font-size: rem(25.725);
+    line-height: rem(34.3);
+    letter-spacing: rem(0.257);
+  }
+}
+.text-type3 {
+  color: $grayscale-label;
+  font-size: rem(16);
+  line-height: rem(22);
+
+  .list-type3 & {
+    font-size: rem(13);
+    font-weight: 500;
+    line-height: rem(20);
+  }
+}
+
+.text-type4 {
+  color: $grayscale-body;
+
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: rem(24);
+  letter-spacing: rem(0.16);
+}
+
+.text-type5 {
+  color: $grayscale-placeholder;
+
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: rem(20);
+}

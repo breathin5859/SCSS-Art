@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+
+%state {
+  width: 100%;
+  height: rem(64);
+  border: rem(1) solid $grayscale-body;
+  border-radius: rem(51);
+  background-color: $grayscale-off-white;
+}
+
+.state {
+  @extend %state;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: rem(40);
+  box-sizing: border-box;
+
+  &.sold-out {
+    border-color: $grayscale-off-white;
+    gap: rem(8);
+  }
+}

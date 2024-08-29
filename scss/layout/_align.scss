@@ -4,21 +4,26 @@
   display: flex;
 
   &.center {
-    @include align(center);
+    justify-content: center;
   }
   &.right {
-    @include align(right);
+    justify-content: end;
   }
   &.both {
-    @include align(both);
+    justify-content: space-between;
   }
+
   &.vt {
-    @include align(null, vt);
+    align-items: start;
   }
   &.vm {
-    @include align(null, vm);
+    align-items: center;
   }
-  &.mb {
-    @include align(null, vb);
+  &.vb {
+    align-items: end;
+  }
+
+  &.col {
+    flex-direction: column;
   }
 }

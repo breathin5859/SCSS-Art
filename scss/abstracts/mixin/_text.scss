@@ -1,18 +1,17 @@
 @use "../function" as *;
 @use "../variable" as *;
 
+$we: 200, 300, 500;
+@each $weight in $we {
+  .we#{$weight} {
+    font-weight: $weight;
+  }
+}
+
 @mixin text($color, $size, $weight, $lineHight, $letter) {
   font-size: $size;
   font-weight: $weight;
   line-height: $lineHight;
   letter-spacing: $letter;
   color: $color;
-}
-
-@mixin avatar-text {
-  font-size: rem(32);
-  font-weight: 700;
-  line-height: rem(36);
-  letter-spacing: rem(1);
-  color: $grayscale-off-white;
 }
